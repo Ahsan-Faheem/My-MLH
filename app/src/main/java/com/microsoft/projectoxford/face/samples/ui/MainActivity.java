@@ -33,6 +33,7 @@
 package com.microsoft.projectoxford.face.samples.ui;
 
 import android.app.AlertDialog;
+import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -78,5 +79,11 @@ public class MainActivity extends AppCompatActivity {
     public void identification(View view) {
         Intent intent = new Intent(this, IdentificationActivity.class);
         startActivity(intent);
+    }
+
+    public void startser(View view) {
+        //startService(new Intent(MainActivity.this,BackgroundPictureService.class));
+        Intent intentService=new Intent(MainActivity.this,BackgroundPictureService.class);
+        startActivity(intentService);
     }
 }
